@@ -20,13 +20,13 @@ I was responsible for gameplay design, as well as all gameplay code and networki
 
 In the original Risk of Rain, HAN-D is a melee tank survivor who is primarily known for repeatedly punching and smashing things.
 
-hopoo originally experimented with HAN-D in early dev builds of RoR2, but abandoned it due to difficulties with making its kit work in 3D, and left behind a half-finished prototype in the files. As a result, there was always a cult following behind the survivor within the community, wishing he could get added to Risk of Rain 2.
+hopoo originally experimented with HAN-D in early dev builds of RoR2, but abandoned it due to difficulties with making its kit work in 3D and left behind a half-finished prototype in the files. As a result, there was always a cult following behind the survivor within the Risk of Rain 2 community, wishing he could get added to the game.
 
 [![](images/HAND/Soul.jpg)]()
 
 ## Figuring out HAN-D's Kit
 
-Early-on in Risk of Rain 2's lifespan, I had experimented with touching up the prototype HAN-D into a workable state, but the biggest limiting factor was figuring out how to adapt HAN-D's kit in a way that would allow it to fight against flying enemies.
+Early-on, I had experimented with touching up the hopoo's prototype HAN-D into a workable state, but the biggest limiting factor was figuring out how to adapt HAN-D's kit in a way that would allow it to fight against flying enemies.
 
 HAN-D's kit in the original Risk of Rain is:
 - Primary: A simple melee attack.
@@ -40,7 +40,7 @@ The initial HAN-D prototype from hopoo had FORCED_REASSEMBLY, the strong melee a
 
 This left 2 skill slots unaccounted for: The Utility and the Special skill.
 
-I was of the opinion that Overclock was central to HAN-D's identity, while Drones could be swapped out. I tried many different combinations of skills during this time period, with the general gist of it being that the Utility was dedicated to being a vertical mobility skill, and Special would be for Overclock.
+I experimented with a lot of different skill setups for these 2 skill slots, like adding a dedicated vertical jump skill, scrapping his original skills in favor of other original skills, attempting to make Overclock a passive, and more.
 
 However, after tons of iteration, I came to the realization that the reason everything I tried felt wrong was because this was essentially turning into an original character that wasn't really HAN-D, and in retrospect, there was a noted decrease in enthusiasm among playtesters.
 
@@ -50,7 +50,7 @@ With that realization in mind, I decided to take a new approach.
 
 [![](images/HAND/FlyingWeakness.jpg)]()
 
-I gave a second pass over HAN-D's kit, opting to directly port the RoR1 kit, and seeing specifically where it was deficient.
+I gave a second pass over HAN-D's kit, opting to directly port his original kit, and observing specifically where it was deficient.
 
 As expected, HAN-D had serious trouble with fighting flying enemies. However, rather than trying to create entirely new skills, I looked at how I could add vertical mobility to existing skills.
 
@@ -64,15 +64,15 @@ On top of this, I decided to treat FORCED_REASSEMBLY as a short-ranged ranged at
 
 [![](images/HAND/M2Range.jpg)]()
 
-Rather than reinventing the wheel, working with HAN-D's existing kit and thinking of it in terms of how it could be made to work within a 3d space proved to be the winning strategy.
+Rather than reinventing the wheel, working with HAN-D's existing kit and thinking of it in terms of how it could be made to work within a 3D space proved to be the winning strategy.
 
 ## Adding Depth
 
-HAN-D's gameplay was feeling much better, but it felt a bit unsatisfying. HAN-D was a melee survivor who would simply go up to an enemy and hold down the attack buttons. There was a lack of a learning curve to the gameplay.
+HAN-D's gameplay was feeling much better, but it felt a bit one-dimensional. HAN-D was a melee survivor who would simply go up to an enemy and hold down the attack buttons. There was a lack of a learning curve to the gameplay.
 
 To address this, I looked at HAN-D's 2 melee attacks, HURT (Primary) and FORCED_REASSEMBLY (Secondary).
 
-In the original Risk of Rain, FORCED_REASSEMBLY knocks enemies into the air, and HURT has high knockback, so you can repeatedly punch enemies against walls. In 3d, having high knockback on a melee character is counterproductive because levels don't have convenient walls you can infinitely stunlock enemies against, so you just knock enemies out-of-range instead.
+In the original Risk of Rain, FORCED_REASSEMBLY knocks enemies into the air and HURT has high knockback, so you can repeatedly punch enemies against walls. In 3d, having high knockback on a melee character is counterproductive because maps don't have convenient walls you can infinitely stunlock enemies against, so you end up simply knocking enemies out-of-range instead.
 
 I decided to adapt FORCED_REASSEMBLY's upwards knockback and HURT's knockback by turning them into a melee combo:
 - FORCED_REASSEMBLY launches grounded enemies into the air.
