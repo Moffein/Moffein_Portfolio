@@ -87,7 +87,7 @@ To remedy this, I made some changes to how Rocket's projectiles are handled.
 
 ### More-Accurate Rocket Jumps for Network Clients
 
-Initially, Rocket Jumps calculated blast force like other blast attacks, by juding the blast position and the position of the player on the server. However, movement in Risk of Rain 2 is client-authoritative. As a result, this desync caused Rocket Jump trajectories to be wildly inaccurate for online clients.
+Initially, Rocket Jumps calculated blast force like other blast attacks, by judging the blast position and the position of the player on the server. However, movement in Risk of Rain 2 is client-authoritative. As a result, this desync caused Rocket Jump trajectories to be wildly inaccurate for online clients.
 
 Noticing this, I reworked the Rocket Jump code to calculate Rocket Jump physics client-side; The server would report when and where the projectile detonated, and the client would use that information to create a more-sensible Rocket Jump path based on their local position.
 
